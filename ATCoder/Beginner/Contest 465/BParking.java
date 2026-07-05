@@ -31,17 +31,20 @@ Sample Output 3: 1100
 
 */
 
+import java.util.Scanner;
+
 public class BParking {
     public static void main(String[] args) {
 
-        testCase(700, 300, 9, 17, 7, 21);
-        testCase(600, 500, 9, 17, 17, 20);
-        testCase(900, 200, 12, 14, 11, 13);
+        Scanner scanner = new Scanner(System.in);
 
-    }
+        int X = scanner.nextInt();
+        int Y = scanner.nextInt();
+        int L = scanner.nextInt();
+        int R = scanner.nextInt();
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
 
-    public static void testCase(int X, int Y, int L, int R, int A, int B) {
-         
         int total = 0;
 
         for (int t = A; t < B; t++) {
@@ -52,8 +55,7 @@ public class BParking {
             }
         }
 
-        System.out.println("For the input - X: " + X + " Y: " + Y + " L: " + L + " R: " + R + " A: " + A + " B: " + B);
-        System.out.println("Fees = " + total);
+        System.out.println(total);
     }
     
 }

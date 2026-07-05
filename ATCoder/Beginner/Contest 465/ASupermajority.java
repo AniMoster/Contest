@@ -27,24 +27,21 @@ Sample Output 3: No
 
 */
 
+import java.util.Scanner;
+
 public class ASupermajority {
     public static void main(String[] args) {
 
-        testCase(316, 465);
-        testCase(101, 248);
-        testCase(666, 999);
+        Scanner scanner = new Scanner(System.in);
         
-    }
-
-    public static void testCase(int A, int B) {
-
-        System.out.println("For the input - A: " + A + " B: " + B);
-        System.out.print("Answer: ");
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
 
         if (A > B * 2 / 3) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
         }
+        
     }
 }
